@@ -1,0 +1,134 @@
+/* Nova i love you */
+/* Loyout really has to be reworked */
+/* Work on all colors around here, !make gradient */
+body {
+	font-family: Verdana, Geneva, sans-serif; /* learn more about fonst, impove solution */
+	height: 100%;
+	width: 100%;
+}
+
+/* Make scroll page by page, 1 scroll means next page and so on*/
+.PageList{
+	height: 100vh; /* doesnot work in android below 4.3 , improve vh value for better solution */
+	font-size: 1.4em;
+	color: white; /* need rgb color here and there next */
+	overflow-y: scroll;  
+	overflow: auto; /* Otherwise all loyout is breaking, to escape this bullshit i have to make responsive code 
+						so all sizes, systems and browsers cound see site as same view */
+}
+
+.PageList img {
+    max-width: 40vh; /* Improve for responsive solution, also different phone rotations make it look different */
+    max-height: 60vh;
+	height: auto;
+	float: right;
+	margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.PageList p {
+	font-weight: bold;
+	margin: 0 0 1em 0; /* Separate paragraph and content */
+}
+
+/* 1.11 Should make one class for next follow properties, 1.11 is kinda bookmark for same comments */
+.PageList a {
+	color: white;
+	text-decoration: none;
+	height: 100%;
+}
+
+.ContainerHelper {
+	max-height: 100%; /* temporary fix of breaking loyout on iphone and galaxy some */
+	max-width: 1024px; /* Work on that value */
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	/* A try to vertically center div, definitely need improve 
+	https://www.w3.org/Style/Examples/007/center.en.html#vertical3 */
+}
+
+.RedBorder {
+	border: 1px solid red; 
+}
+
+/*
+#Contents{
+	position: fixed;
+	background: gray;
+}
+*/
+
+#Contents ul{
+	list-style:circle inside;
+}
+
+#Contents li{
+	display:list-item;
+}
+
+#Contents ul li a{
+	color: white; 
+	text-decoration: none;
+}
+
+#WelcomeScreen {
+	background: black; /* improve this and all next follow colors for rgb value */
+}
+
+/* Nova i love you title supposed to pack in one string, make it real*/
+#WelcomeScreen h1 {
+	text-align: center;
+	font-size: 12vh; /* need more general solition to show it up right for different browers and systems, also more right vh value depends of pixels*/
+}
+
+#GotUsedTo {
+	background: #0066ff;
+}
+
+/* color every next <li> in <ul> list */
+#GotUsedTo li:nth-child(2n+1) {
+	color: #0033cc;
+}
+
+#ImNova{
+	background: orange; 
+}
+
+#Surviving{
+	background: black;
+}
+
+
+/* Work on link colors */
+
+#AllMyLinks{
+	background: #0066ff;
+}
+
+/* Need to remove empty linked space, also work on next follow three id's, try to make less code and make it better, more responsive*/
+#AllMyLinks ul li a{
+	display: flex;
+	align-items: center; /* Vertically center text. Should find better solution because flex does not work
+							on old versions browsers and everything */
+	border: 0.1em solid transparent;
+}
+
+#AllMyLinks ul li a:hover{
+	border: 0.1em solid white;
+}
+
+/* Logos */
+#AllMyLinks img{
+	max-height: 2em;
+	max-width: 2em;
+	margin: 0.6em 0.8em 0.6em 0.8em; /* Following logos using rules */
+	clear: both;
+	float: none;
+}
+
+/* Here is conflict of properties with PageList and ContainerHelper, fix this*/
+#Footer{
+	height: 50vh;
+	background: gray;
+}

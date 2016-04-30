@@ -88,7 +88,7 @@ body {
 
 /* color every next <li> in <ul> list */
 #GotUsedTo li:nth-child(2n+1) {
-	color: #0033cc;
+	color: DarkBlue;
 }
 
 #ImNova{
